@@ -20,6 +20,3 @@ if usersFetched != None:
         u = Users(user['name'], user['username'], user['email'], 1, phone, user['website'], 1 )
         u.insert_users()
 
-
-
-

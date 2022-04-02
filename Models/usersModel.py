@@ -19,19 +19,15 @@ class Users:
 
     @staticmethod
     def get_users():
-        print("Select All USERS")
+        print("SELECT ALL USERS")
 
 
     @staticmethod
     def get_user_by_id(ind):
 
         if ind == 4:
-            print("Select user Alpha")
+            print("GET SINGLE POST BY ID")
         
         else:
-            print("User not found !")
-
-    @staticmethod
-    def update_user():
-        print("Updated user")
+            print("POST NOT FOUND !")
     
