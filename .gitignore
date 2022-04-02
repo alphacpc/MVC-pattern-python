@@ -1,9 +1,10 @@
 api-env
-Config/__pycache___
-Config/__pycache___/
-Controllers/__pycache___
-Models/__pycache___
+Config/__pycache__
+Config/__pycache__/
+Controllers/__pycache__
+Controllers/__pycache__/
+Models/__pycache__
 Models/__pycache__/
 Views/__pycache___
 Views/__pycache__/
-__pycache___
+__pycache__

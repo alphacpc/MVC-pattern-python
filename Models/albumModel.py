@@ -1,8 +1,9 @@
 import sys
 sys.path.append("..")
+from Models.sameQueriesModel import BasicQuery
 from Config.connectDB import Database
 
-class Album:
+class Album(BasicQuery):
 
     def __init__(self, title = '', userid = ''):
         self.title = title
@@ -12,16 +13,5 @@ class Album:
     def add_album(self):
         print(self.title, self.userid,"\n")
 
-    @staticmethod
-    def get_albums():
-        print("SELECT ALL ALBUMS")
-
-
-    @staticmethod
-    def get_album_by_id(ind):
-
-        if ind == 4:
-            print("GET SINGLE ALBUM BY ID")
-        
-        else:
-            print("ALBUM NOT FOUND !")
+BasicQuery.get_item_by_id(4)
+BasicQuery.get_all_items()
