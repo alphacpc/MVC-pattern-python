@@ -10,10 +10,8 @@ if posts != None:
     for post in posts:
 
         p = Posts(post['title'],post['body'],post['userId'])
-        p.add_posts()
+        # p.add_posts()
 
 
-Posts.get_post_by_id(4)
-Posts.get_post_by_id(3)
-Posts.get_posts()
 
+Posts.get_all_items("Posts")

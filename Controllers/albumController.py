@@ -10,10 +10,7 @@ if albums != None:
     for album in albums:
 
         p = Album(album['title'],album['userId'])
-        p.add_album()
+        # p.add_album()
 
 
-Album.get_album_by_id(4)
-Album.get_album_by_id(3)
-Album.get_albums()
-
+Album.get_all_items("Albums")

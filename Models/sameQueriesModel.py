@@ -1,12 +1,22 @@
 import sys
+from tabulate import tabulate
 sys.path.append("..")
 from Config.connectDB import Database
+
+tabNames = ["Users","Albums","Posts","Comments","Todos"]
+
 
 class BasicQuery:
 
     @staticmethod
-    def get_all_items():
-        print("SELECT ALL ALBUMS")
+    def get_all_items(tabname):
+
+
+        if tabname in tabNames:
+
+            querySelect =  "SELECT * FROM " + tabname.upper()
+
+            print(querySelect)
 
 
     @staticmethod

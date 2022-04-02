@@ -10,10 +10,6 @@ if todos != None:
     for todo in todos:
 
         p = Todos(todo['title'],todo['userId'])
-        p.add_todo()
+        
 
-
-Todos.get_todo_by_id(4)
-Todos.get_todo_by_id(3)
-Todos.get_todos()
-
+Todos.get_all_items("Todos")

@@ -13,5 +13,3 @@ class Album(BasicQuery):
     def add_album(self):
         print(self.title, self.userid,"\n")
 
-BasicQuery.get_item_by_id(4)
-BasicQuery.get_all_items()

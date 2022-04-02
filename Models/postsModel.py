@@ -1,8 +1,9 @@
 import sys
 sys.path.append("..")
 from Config.connectDB import Database
+from Models.sameQueriesModel import BasicQuery
 
-class Posts:
+class Posts(BasicQuery):
 
     def __init__(self, title = '', body = '', userid = ''):
         self.title = title
@@ -12,17 +13,3 @@ class Posts:
 
     def add_posts(self):
         print(self.title, self.body, self.userid,"\n")
-
-    @staticmethod
-    def get_posts():
-        print("SELECT ALL POSTS")
-
-
-    @staticmethod
-    def get_post_by_id(ind):
-
-        if ind == 4:
-            print("GET SINGLE POST BY ID")
-        
-        else:
-            print("POST NOT FOUND !")

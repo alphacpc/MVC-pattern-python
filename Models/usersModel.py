@@ -1,8 +1,9 @@
 import sys
 sys.path.append("..")
 from Config.connectDB import Database
+from Models.sameQueriesModel import BasicQuery
 
-class Users:
+class Users(BasicQuery):
 
     def __init__(self, name = '', username = '', email = '', address = '', phone = '', website = '', company = ''):
         self.name = name
@@ -14,20 +15,6 @@ class Users:
         self.company = company
 
 
-    def insert_users(self):
+    def add_users(self):
         print(self.name, self.username, self.email, self.address, self.phone, self.website, self.company)
 
-    @staticmethod
-    def get_users():
-        print("SELECT ALL USERS")
-
-
-    @staticmethod
-    def get_user_by_id(ind):
-
-        if ind == 4:
-            print("GET SINGLE POST BY ID")
-        
-        else:
-            print("POST NOT FOUND !")
-    

@@ -18,5 +18,6 @@ if usersFetched != None:
         phone = phone.replace('.','-')
         
         u = Users(user['name'], user['username'], user['email'], 1, phone, user['website'], 1 )
-        u.insert_users()
+        
 
+Users.get_all_items("Users")
