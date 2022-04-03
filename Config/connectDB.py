@@ -9,7 +9,7 @@ class Database:
         'user': 'root',
         'password': 'root',
         'host': 'localhost',
-        'database': 'Exercice1'
+        'database': 'ApiPythonDB'
         }
         
         conn = mysql.connector.connect(**config);
@@ -17,7 +17,7 @@ class Database:
         if conn.is_connected():
             print("Connexion avec succès !")
             cursor = conn.cursor()
-            return cursor
+            return conn, cursor
 
         else:
             print("Impossible de se connecter à la base de données !")

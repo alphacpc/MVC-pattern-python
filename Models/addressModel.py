@@ -2,6 +2,8 @@ import sys
 sys.path.append("..")
 from Config.connectDB import Database
 
+conn, cursor = Database.connexion()
+
 class Address:
 
     def __init__(self, street = '', suite = '', city = '', zipcode = '', lat = '', lng = ''):
@@ -14,8 +16,17 @@ class Address:
 
 
     def add_address(self):
-        print(self.street, self.suite, self.city, self.zipcode, self.lat, self.lng,"\n")
+
+        queryInsert =  "INSERT INTO Address(street, suite, city, zipcode, lat, lng) VALUES(%s,%s,%s,%s,%s,%s)"
+        tup  = (self.street, self.suite, self.city, self.zipcode, self.lat, self.lng)
+        # print(tup)
+        # cursor.execute(queryInsert, tup)
+        # conn.commit()
+
 
     @staticmethod
-    def get_address():
-        print("SELECT ALL ADDRESS")
+    def get_address_same():
+        print("SELECT idAddress, zipcode FROM Address")
+        cursor.execute("SELECT idAddress, zipcode FROM Address")
+        res = cursor.fetchall()
+        return res
