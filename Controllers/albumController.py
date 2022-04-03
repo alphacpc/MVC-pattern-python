@@ -11,3 +11,12 @@ if albums != None:
 
         a = Album(album['title'],album['userId'])
         a.add_album()
+
+
+def get_Albums(tab):
+    
+    if tab == "Albums":
+        return Album.get_all_items(tab)
+
+    else:
+        return None

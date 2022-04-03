@@ -13,3 +13,10 @@ if posts != None:
         p.add_posts()
 
 
+def get_Posts(tab):
+    
+    if tab == "Posts":
+        return Posts.get_all_items(tab)
+
+    else:
+        return None

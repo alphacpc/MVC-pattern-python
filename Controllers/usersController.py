@@ -23,7 +23,7 @@ def get_company_data(users):
 #  CALL APIs FOR USERS AND CHECK IF VALUES ISN'T None
 usersFetched  = fetch_all("users")
 
-if usersFetched != None:
+if usersFetched == "Nice":
 
     #get_address_data(usersFetched)
     tabAddress = Address.get_address_same()
@@ -41,15 +41,18 @@ if usersFetched != None:
             if item[1] == user["address"]["zipcode"]:
                 user_address_id = item[0]
 
-
         for item in tabCompanies:
             if item[1] == user["company"]["name"]:
                 user_company_id = item[0]
        
+        # u = Users(user['name'], user['username'], user['email'], user_address_id, phone, user['website'], user_company_id )
+
 
         
-        u = Users(user['name'], user['username'], user['email'], user_address_id, phone, user['website'], user_company_id )
-        # u.add_users()
+def get_Users(tab):
 
-        
+    if tab == "Users":
+        return Users.get_all_items(tab)
 
+    else:
+        return None

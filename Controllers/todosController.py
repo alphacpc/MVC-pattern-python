@@ -12,3 +12,12 @@ if todos != None:
         
         t = Todos(todo["title"],todo["userId"],todo["completed"])
         t.add_todo()
+
+
+def get_Todos(tab):
+    
+    if tab == "Todos":
+        return Todos.get_all_items(tab)
+
+    else:
+        return None

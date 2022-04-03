@@ -13,3 +13,10 @@ if comments != None:
         c.add_comments()
 
 
+def get_Comments(tab):
+    
+    if tab == "Comments":
+        return Comments.get_all_items(tab)
+
+    else:
+        return None
