@@ -1,6 +1,6 @@
 import sys
 sys.path.append("..")
 
-from Controllers.usersController import get_Users;
+from Controllers.todosController import get_Todos;
 
-print(get_Users("Todos"))
+print(get_Todos("Todos"))
