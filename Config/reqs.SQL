@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS Address (
 
 CREATE TABLE IF NOT EXISTS Company (
     idCompany int AUTO_INCREMENT,
-    name_Company varchar(100),
+    name_company varchar(100),
     catchPhrase varchar(100),
     bs varchar(100),
     PRIMARY KEY (idCompany)

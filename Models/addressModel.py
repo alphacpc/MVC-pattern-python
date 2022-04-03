@@ -26,7 +26,6 @@ class Address:
 
     @staticmethod
     def get_address_same():
-        print("SELECT idAddress, zipcode FROM Address")
         cursor.execute("SELECT idAddress, zipcode FROM Address")
         res = cursor.fetchall()
         return res
