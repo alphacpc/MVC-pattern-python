@@ -15,8 +15,8 @@ class Comments(BasicQuery):
 
 
     def add_comments(self):
+        # A executer qu'une seule fois
         queryInsert =  "INSERT INTO Comments(name_Comment, email_Comment, body_Comment, postId ) VALUES(%s,%s, %s, %s)"
         tup  = (self.name, self.email, self.body, self.postid)
-        # print(tup)
-        # cursor.execute(queryInsert, tup)
-        # conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()

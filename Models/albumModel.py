@@ -13,7 +13,8 @@ class Album(BasicQuery):
 
 
     def add_album(self):
+        # A executer qu'une seule fois
         queryInsert =  "INSERT INTO Albums(title_Album, userId_Album ) VALUES(%s,%s)"
         tup  = (self.title, self.userid)
-        #cursor.execute(queryInsert, tup)
-        #conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()

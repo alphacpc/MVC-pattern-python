@@ -16,5 +16,5 @@ class Posts(BasicQuery):
     def add_posts(self):
         queryInsert =  "INSERT INTO Posts(title_Post, body_Post, userId_Post ) VALUES(%s,%s,%s)"
         tup  = (self.title, self.body, self.userid)
-        # cursor.execute(queryInsert, tup)
-        # conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()

@@ -15,7 +15,6 @@ class Database:
         conn = mysql.connector.connect(**config);
         
         if conn.is_connected():
-            print("Connexion avec succès !")
             cursor = conn.cursor()
             return conn, cursor
 

@@ -14,8 +14,8 @@ class Company:
     def add_company(self):
         queryInsert =  "INSERT INTO Company(name_company,catchPhrase,bs) VALUES(%s,%s,%s)"
         tup  = (self.name, self.cphrase, self.bs)
-        #cursor.execute(queryInsert, tup)
-        #conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()
 
 
 

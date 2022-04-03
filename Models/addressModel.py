@@ -16,12 +16,11 @@ class Address:
 
 
     def add_address(self):
-
+        #A executer qu'une seule fois
         queryInsert =  "INSERT INTO Address(street, suite, city, zipcode, lat, lng) VALUES(%s,%s,%s,%s,%s,%s)"
         tup  = (self.street, self.suite, self.city, self.zipcode, self.lat, self.lng)
-        # print(tup)
-        # cursor.execute(queryInsert, tup)
-        # conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()
 
 
     @staticmethod

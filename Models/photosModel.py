@@ -17,6 +17,5 @@ class Photos(BasicQuery):
     def add_photos(self):
         queryInsert =  "INSERT INTO Photos(title_Photo, url_Photo, thumbnailUrl, albumId  ) VALUES(%s, %s, %s, %s)"
         tup  = (self.title, self.url, self.thumbnail, self.albumId)
-        # print(tup)
-        # cursor.execute(queryInsert, tup)
-        # conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()

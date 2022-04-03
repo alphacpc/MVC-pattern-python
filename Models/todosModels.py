@@ -16,5 +16,5 @@ class Todos(BasicQuery):
     def add_todo(self):
         queryInsert =  "INSERT INTO Todos(title_Todo, userId_Todo, status) VALUES(%s,%s,%s)"
         tup  = (self.title, self.userid, self.status)
-        # cursor.execute(queryInsert, tup)
-        # conn.commit()
+        cursor.execute(queryInsert, tup)
+        conn.commit()

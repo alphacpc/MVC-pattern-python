@@ -25,10 +25,10 @@ usersFetched  = fetch_all("users")
 
 if usersFetched == "Nice":
 
-    #get_address_data(usersFetched)
+    get_address_data(usersFetched)
     tabAddress = Address.get_address_same()
 
-    #get_company_data(usersFetched)
+    get_company_data(usersFetched)
     tabCompanies = Company.get_address_same()
 
     for user in usersFetched:
@@ -45,8 +45,8 @@ if usersFetched == "Nice":
             if item[1] == user["company"]["name"]:
                 user_company_id = item[0]
        
-        # u = Users(user['name'], user['username'], user['email'], user_address_id, phone, user['website'], user_company_id )
-
+        u = Users(user['name'], user['username'], user['email'], user_address_id, phone, user['website'], user_company_id )
+        u.add_users()
 
         
 def get_Users(tab):
