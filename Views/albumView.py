@@ -3,4 +3,6 @@ sys.path.append("..")
 
 from Controllers.albumController import get_Albums;
 
-print(get_Albums("Albums"))
+def albums(tab):
+    print("\n****LISTES DES ALBUMS****\n")
+    print(get_Albums(tab))
