@@ -3,6 +3,8 @@ sys.path.append("..")
 from Config.connectDB import Database
 from Models.sameQueriesModel import BasicQuery
 
+conn, cursor = Database.connexion()
+
 class Comments(BasicQuery):
 
     def __init__(self, name = '', email = '', body = '', postid = ''):
@@ -13,5 +15,8 @@ class Comments(BasicQuery):
 
 
     def add_comments(self):
-        print(self.name, self.email, self.body, self.postid,"\n")
-
+        queryInsert =  "INSERT INTO Comments(name_Comment, email_Comment, body_Comment, postId ) VALUES(%s,%s, %s, %s)"
+        tup  = (self.name, self.email, self.body, self.postid)
+        # print(tup)
+        # cursor.execute(queryInsert, tup)
+        # conn.commit()

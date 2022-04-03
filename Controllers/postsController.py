@@ -9,9 +9,7 @@ if posts != None:
     
     for post in posts:
 
-        p = Posts(post['title'],post['body'],post['userId'])
-        # p.add_posts()
+        p = Posts(post['title'],post['body'].replace("\n"," "),post['userId'])
+        p.add_posts()
 
 
-
-Posts.get_all_items("Posts")

@@ -9,8 +9,7 @@ if comments != None:
     
     for comment in comments:
 
-        p = Comments(comment['name'], comment['email'], comment['body'], comment['postId'])
-        # p.add_comments()
+        c = Comments(comment['name'], comment['email'], comment['body'].replace("\n"," "), comment['postId'])
+        c.add_comments()
 
 
-Comments.get_all_items("Comments")

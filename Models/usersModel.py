@@ -18,10 +18,8 @@ class Users(BasicQuery):
 
 
     def add_users(self):
-        print(self.name, self.username, self.email, self.address, self.phone, self.website, self.company)
-
         queryInsert =  "INSERT INTO Users(name_User, username, email, idAddress_User, phone, website, idCompany_User) VALUES(%s,%s,%s,%s,%s,%s, %s)"
         tup  = (self.name, self.username, self.email, self.address, self.phone, self.website, self.company)
         # print(tup)
-        cursor.execute(queryInsert, tup)
-        conn.commit()
+        # cursor.execute(queryInsert, tup)
+        # conn.commit()

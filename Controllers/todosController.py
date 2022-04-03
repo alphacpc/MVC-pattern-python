@@ -5,11 +5,10 @@ from Models.todosModels import Todos
 
 todos = fetch_all("todos")
 
+
 if todos != None:
     
     for todo in todos:
-
-        p = Todos(todo['title'],todo['userId'])
         
-
-Todos.get_all_items("Todos")
+        t = Todos(todo["title"],todo["userId"],todo["completed"])
+        t.add_todo()

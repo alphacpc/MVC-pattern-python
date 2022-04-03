@@ -3,6 +3,8 @@ sys.path.append("..")
 from Config.connectDB import Database
 from Models.sameQueriesModel import BasicQuery
 
+conn, cursor = Database.connexion()
+
 class Posts(BasicQuery):
 
     def __init__(self, title = '', body = '', userid = ''):
@@ -12,4 +14,7 @@ class Posts(BasicQuery):
 
 
     def add_posts(self):
-        print(self.title, self.body, self.userid,"\n")
+        queryInsert =  "INSERT INTO Posts(title_Post, body_Post, userId_Post ) VALUES(%s,%s,%s)"
+        tup  = (self.title, self.body, self.userid)
+        # cursor.execute(queryInsert, tup)
+        # conn.commit()

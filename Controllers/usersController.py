@@ -25,7 +25,7 @@ usersFetched  = fetch_all("users")
 
 if usersFetched != None:
 
-    # get_address_data(usersFetched)
+    #get_address_data(usersFetched)
     tabAddress = Address.get_address_same()
 
     #get_company_data(usersFetched)
@@ -49,9 +49,7 @@ if usersFetched != None:
 
         
         u = Users(user['name'], user['username'], user['email'], user_address_id, phone, user['website'], user_company_id )
-        u.add_users()
+        # u.add_users()
 
-        # adresse = Address()
-        # print(u.email)
         
 
